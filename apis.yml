@@ -23,10 +23,16 @@ apis:
       - type: Documentation
         url: https://buddy.works/docs/api/getting-started/overview
 common:
+  - type: TrustCenter
+    url: security/buddy-trust-center.yml
+  - type: DomainSecurity
+    url: security/buddy-domain-security.yml
   - type: Website
     url: https://buddy.works/docs/api/getting-started/overview
   - type: PublicAPIsListing
     url: https://github.com/public-apis/public-apis
+  - url: https://buddy.works/blog
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
