@@ -1,0 +1,160 @@
+{
+  "protocolVersion": "1.0.0",
+  "name": "Buddy MCP",
+  "version": "1.0.0",
+  "description": "Buddy provides agentic infrastructure for coding agents: sandbox VMs, app and website hosting, git repositories, package registry, domains and CI/CD workflows - so agents can write, review, test, deploy and ship software. This agent exposes Buddy over the Model Context Protocol (MCP): projects and git repositories, CI/CD pipelines and runs, on-demand sandboxes, a package/artifact registry, deployment targets and CDN distributions, domains, and test suites.",
+  "url": "https://mcp.buddy.works/mcp",
+  "preferredTransport": "JSONRPC",
+  "provider": {
+    "organization": "Buddy",
+    "url": "https://buddy.works"
+  },
+  "documentationUrl": "https://buddy.works/docs",
+  "iconUrl": "https://buddy.works/favicon.ico",
+  "capabilities": {},
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "securitySchemes": {
+    "oauth2": {
+      "type": "oauth2",
+      "description": "OAuth 2.1 with authorization code + PKCE. Protected resource metadata: https://mcp.buddy.works/.well-known/oauth-protected-resource. A Buddy personal access token may also be used as a bearer token.",
+      "flows": {
+        "authorizationCode": {
+          "authorizationUrl": "https://api.buddy.works/oauth2/authorize",
+          "tokenUrl": "https://api.buddy.works/oauth2/token",
+          "scopes": {
+            "WORKSPACE": "Access workspaces, projects and members",
+            "REPOSITORY_READ": "Read git repository contents",
+            "EXECUTION_INFO": "Read pipeline and run details",
+            "EXECUTION_RUN": "Start, cancel and retry pipeline runs",
+            "EXECUTION_MANAGE": "Create, update and delete pipelines",
+            "PROJECT_DELETE": "Delete projects",
+            "SANDBOX_INFO": "Read sandbox details",
+            "SANDBOX_MANAGE": "Create, control and delete sandboxes",
+            "ARTIFACT_READ": "Read packages and artifacts",
+            "ARTIFACT_WRITE": "Upload package version content",
+            "ARTIFACT_MANAGE": "Create, update and delete packages",
+            "TARGET_INFO": "Read deployment targets",
+            "DISTRIBUTION_INFO": "Read distributions and routes",
+            "DISTRIBUTION_ADD": "Add distribution routes",
+            "DISTRIBUTION_MANAGE": "Create and delete distributions and routes",
+            "ZONE_READ": "Read domains and DNS zones",
+            "ZONE_WRITE": "Register, buy and claim domains",
+            "VISUAL_TEST_INFO": "Read visual test suites",
+            "VISUAL_TEST_MANAGE": "Create visual test suites",
+            "UNIT_TEST_INFO": "Read unit test suites",
+            "UNIT_TEST_MANAGE": "Create unit test suites",
+            "CRAWL_INFO": "Read crawl test suites",
+            "CRAWL_MANAGE": "Create crawl test suites",
+            "USER_INFO": "Read the authenticated user's profile",
+            "USER_KEY": "Manage the user's SSH keys"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2": []
+    }
+  ],
+  "skills": [
+    {
+      "id": "manage-projects",
+      "name": "Manage projects and git repositories",
+      "description": "Create, update and delete projects and inspect their git repositories \u2014 branches, commits, tags and pull requests.",
+      "tags": [
+        "projects",
+        "git",
+        "repositories",
+        "commits",
+        "pull-requests"
+      ]
+    },
+    {
+      "id": "run-pipelines",
+      "name": "Run and monitor CI/CD pipelines",
+      "description": "Create and edit pipelines (YAML), start, cancel, retry and approve runs, and read per-action status and logs.",
+      "tags": [
+        "ci-cd",
+        "pipelines",
+        "builds",
+        "deployments",
+        "automation"
+      ]
+    },
+    {
+      "id": "manage-sandboxes",
+      "name": "Manage sandboxes",
+      "description": "Create and control on-demand sandbox VMs, run shell commands, transfer files, manage snapshots and run apps inside them.",
+      "tags": [
+        "sandbox",
+        "vm",
+        "environments",
+        "shell",
+        "snapshots"
+      ]
+    },
+    {
+      "id": "manage-packages",
+      "name": "Manage the package and artifact registry",
+      "description": "Create packages and versions, browse and edit their contents, and upload or download files and ZIP archives.",
+      "tags": [
+        "packages",
+        "artifacts",
+        "registry",
+        "storage"
+      ]
+    },
+    {
+      "id": "manage-deployments",
+      "name": "Manage deployment targets and CDN distributions",
+      "description": "Inspect deployment targets and create distributions with routes that map domains and paths to per-region targets.",
+      "tags": [
+        "deployments",
+        "targets",
+        "distributions",
+        "cdn",
+        "routing"
+      ]
+    },
+    {
+      "id": "manage-domains",
+      "name": "Manage domains and DNS zones",
+      "description": "List domains and DNS zones, check availability, suggest and buy domains, and claim free sub-names under Buddy-owned zones.",
+      "tags": [
+        "domains",
+        "dns",
+        "zones"
+      ]
+    },
+    {
+      "id": "manage-test-suites",
+      "name": "Manage test suites",
+      "description": "List and create visual, unit and crawl test suites and obtain their run tokens.",
+      "tags": [
+        "testing",
+        "visual-tests",
+        "unit-tests",
+        "crawl"
+      ]
+    },
+    {
+      "id": "workspace-admin",
+      "name": "Inspect workspaces and users",
+      "description": "Identify the authenticated user, list workspaces and their members, and manage the user's SSH keys.",
+      "tags": [
+        "workspace",
+        "members",
+        "users",
+        "ssh-keys"
+      ]
+    }
+  ]
+}

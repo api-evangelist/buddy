@@ -23,6 +23,10 @@ apis:
       - type: Documentation
         url: https://buddy.works/docs/api/getting-started/overview
 common:
+  - type: AgentCard
+    url: a2a/buddy-a2a.yml
+    name: A2A Agent Card
+    description: Agent Card served at /.well-known/agent-card.json (conformant against A2A 1.0.0).
   - type: TrustCenter
     url: security/buddy-trust-center.yml
   - type: DomainSecurity

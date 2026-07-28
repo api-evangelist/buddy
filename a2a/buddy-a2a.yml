@@ -1,0 +1,36 @@
+generated: '2026-07-28'
+method: probed
+source: https://buddy.works/.well-known/agent-card.json
+description: 'A2A Agent Card observed at /.well-known/agent-card.json on buddy.works. Grade is measured
+  against the A2A 1.0.0 AgentCard object: ''conformant'' passes every structural check, ''near-conformant''
+  is correctly shaped but omits optional fields, ''flavored'' fails a hard check and is an agent card
+  in spirit rather than in schema. Provider-published by construction — served from the provider''s own
+  host; nothing here is derived or generated.'
+discovery:
+  path: /.well-known/agent-card.json
+  canonical: true
+  host: buddy.works
+conformance:
+  spec: A2A 1.0.0
+  grade: conformant
+  protocol_version: 1.0.0
+  preferred_transport: JSONRPC
+  deviations: []
+card:
+  name: Buddy MCP
+  description: 'Buddy provides agentic infrastructure for coding agents: sandbox VMs, app and website
+    hosting, git repositories, package registry, domains and CI/CD workflows - so agents can write, review,
+    test, deploy and ship software. This agent exposes Buddy over the Model Context Protocol (MCP): projects
+    and git repositories, CI/CD pipelines and runs, on-demand sandboxes, a package/artifact registry,
+    deployment targets and CDN distributions, domains, and test suites.'
+  url: https://mcp.buddy.works/mcp
+  version: 1.0.0
+  documentation_url: https://buddy.works/docs
+  skills: 8
+  file: buddy-agent-card.json
+x-evidence:
+  fetched: '2026-07-28'
+  url: https://buddy.works/.well-known/agent-card.json
+  http_status: 200
+  content_type: application/json
+  note: Verbatim body saved alongside this manifest. No field inferred.
