@@ -61,6 +61,8 @@ common:
     url: https://github.com/public-apis/public-apis
   - url: https://buddy.works/blog
     type: Blog
+  - type: Support
+    url: mailto:support@buddy.works
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
