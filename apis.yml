@@ -36,11 +36,11 @@ tags:
   - Continuous Integration
   - Developer Tools
   - Public APIs
+  - A2A
 apis:
   - name: Buddy
     description: "The fastest continuous integration and continuous delivery platform"
     humanURL: https://buddy.works/docs/api/getting-started/overview
-    baseURL: https://buddy.works/docs/api/getting-started/overview
     tags:
       - Continuous Integration
     properties:
@@ -66,3 +66,10 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-a2a:
+  verified: true
+  probed: '2026-09-26'
+  url: "https://buddy.works/.well-known/agent-card.json"
+  grade: "conformant"
+  protocol_version: "1.0.0"
+  control: 404
