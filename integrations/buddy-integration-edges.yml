@@ -41,6 +41,23 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: Automation
+- partner_name: Slack (own)
+  partner: slack
+  partner_match: mirror
+  mirror_match: domain+product
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://slack.com/marketplace/A032WBM72TF-buddy-eu
+  mirror_of: slack/integrations/slack-integration-edges.yml
+  apps:
+  - Buddy EU
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Slack app
 - partner_name: A2A protocol (own Agent Card)
   partner: null
   partner_match: register
@@ -70,25 +87,8 @@ edges:
     matched_domain: buddy.works
     matched_by: own-domain
     detected_by: sweep-ai-agents.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   detected_by: sweep-ai-agents.py
   first_seen: '2026-10-15'
-- partner_name: Slack (own)
-  partner: slack
-  partner_match: mirror
-  mirror_match: domain+product
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://slack.com/marketplace/A032WBM72TF-buddy-eu
-  mirror_of: slack/integrations/slack-integration-edges.yml
-  apps:
-  - Buddy EU
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Slack app
 source:
 - https://github.com/marketplace?type=apps
